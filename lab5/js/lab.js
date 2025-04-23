@@ -1,8 +1,22 @@
-// index.js - purpose and description here
-// Author: Your Name
-// Date:
+// index.js - TASK @ ADD VARIABLES
+// Author: Kalani Martin
+// Date: 4/22/25
 
-// Constants
+// define variables
+make = "toyota";
+model = "sienna";
+year = 2006;
+color ="grey"
+
+// caculate
+age = 2025 - year;
+
+// output
+document.writeln("Make: " + make + "<br›");
+document.writeln ("Model: " + model + "<br›");
+document. writeln("Color: " + color + "<br›");
+document.writeln ("Year: " + year + "<br›");
+document.writeln ("Age: " + age + " years<br›");
 
 // Functions
 
