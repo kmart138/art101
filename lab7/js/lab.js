@@ -39,9 +39,13 @@ function main() {
 
   // after function nameuser is finished this text will be displayed.
   var name = nameUser();
-  document.writeln("sorted name : " +
-     name + "</br>");
+  document.writeln("sorted name : " + name + "</br>");
+  
+  document.writeln("<div class='named'>" + "stylized : " + name + "</div>");
 }
 
 // let's get this party started
 main();
+
+
+
