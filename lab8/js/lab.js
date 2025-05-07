@@ -38,6 +38,9 @@ var results = array.map(function(x){
 
 console.log("Results with anon function", results);
 
+var mapResults = "Original array: " + "[" + array + "]" + "<br>Minus 2: " + array.map(numMinus) + "<br>" + "To The Power Of 0.2: " + results;
+
+$("#output").html(mapResults)
 
 function main() {
   
