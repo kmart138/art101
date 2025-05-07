@@ -27,7 +27,7 @@ console.log("my array", array);
 // console.log "my array", array); is used to forst name the array as "array" then use the function numMinus to minus 2 from each number in the array.
 
 var results = array.map(numMinus);
-console.log("my array after map", results);
+console.log("my array after map with numMinus", results);
 
 // this is the array after the map function is used to minus 2 from each number in the array.
 
@@ -35,6 +35,8 @@ var results = array.map(function(x){
   return x ** 0.2;
 })
 // should return array with each number minus 2 then ** 0.2.
+
+console.log("Results with anon function", results);
 
 
 function main() {
