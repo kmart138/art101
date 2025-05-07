@@ -1,5 +1,5 @@
 // index.js lab 7 functions JS
-// Author: Kalani Martin
+// Author: Kalani Min
 // Date: 4/29/2025
 
 // Constants
