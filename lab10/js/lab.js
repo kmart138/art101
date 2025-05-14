@@ -27,5 +27,3 @@ $("#main").click(function(){
 
 main();
 
-
-

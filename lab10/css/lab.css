@@ -40,3 +40,13 @@
     border: solid 1px #888;
     font-family: 'Courier New', Courier, monospace;
   }
+
+  /* Source: https://stackoverflow.com/questions/9090011/alternate-coloring-of-div-elements-css */
+  
+  .text:nth-child(odd) {
+    text-align: left;
+  }
+  .text:nth-child(even) {
+    text-align: right;
+  }
+
