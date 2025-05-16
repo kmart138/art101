@@ -32,7 +32,34 @@ $("#publish").click(function(){
 });
 
 
+// sortAnagram function shuffles the name to create an anagram
+// Reference: https://www.w3schools.com/js/js_array_sort.asp#mark_random
 
+function sortAnagram(name) {
+  var userName = name;
+
+  // Split string into an array
+
+  var arrayName = userName.split('');
+
+  // Sort the array by doing so randomly
+
+  var sortedArray = arrayName.sort(function(){return 0.5 - Math.random();});
+
+  // Convert the array back to a string
+
+  var sortedName = sortedArray.join('');
+
+  // Return sorted name
+
+  return sortedName;
+}
+
+$("#annagram").click(function(){
+  const userName = $("#user-name").val();
+  const anagram = sortAnagram(userName);
+  $("#output").append('<div class="text"><p>' + anagram + '</p></div>');
+});
 //TASK X
 
 
