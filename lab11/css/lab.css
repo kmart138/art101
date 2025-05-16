@@ -1,0 +1,51 @@
+/* Here we can set styles for this lab page that we don't want to effect others pages */
+
+/* the period in a CSS selector selects an element by class, e.g., class="minor-section" */
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 5em;
+  text-align: center;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-family: 'Courier New', Courier, bold, monospace;
+  font-size: 2em;
+  text-align: left;
+}
+
+p {
+  font-family: "courier new", monospace;
+  font-size: 1.5em;
+  color: #000000;
+  font-size: 1.5em;
+  text-indent: 50px;
+}
+
+#content {
+  color: rgb(211, 55, 55);
+  background-color: rgb(130, 129, 129);
+  min-height: 5000px;
+  border:  solid 1px #4b4848;
+}
+
+.minor-section {
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 10px;
+    border: solid 1px #888;
+    background-color: #DDD8C4;
+    color: rgb(0, 0, 0);
+  }
+
+.special {
+    background-color: #ff0000;
+    border: solid 1px #302d2d;
+    color: #40405d;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    font-family: "times new roman", serif;
+}
