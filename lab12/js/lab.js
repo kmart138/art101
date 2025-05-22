@@ -6,11 +6,18 @@
 
 //functions
 
+let houses = [
+  "House of theivery and misfortune: Oakland - the city of car theft",
+  'House of Whippets and Mischief: San Bernadino - the city of crime <img src="images/sanbern.jpg" alt="San Bernadino" style="height:50px;">', 
+  "House of fentanyl and Influencers: Los Angeles - the city of influencers",
+  "House of Despair and Desolate: Bakersfeild - the city of farming"
+];
+
 function sortingHat(str) {
   
-// Gets the remaider of the string length divided by 4
+// Gets the remainder of the string length divided by 4
 
-  let mod = str % 4;
+  let mod = str % houses.length;
 
 // 0-3 choices for the sorting hat
   // 0 = House of theivery and misfortune: Oakland
@@ -19,15 +26,7 @@ function sortingHat(str) {
   // 3 = House of Despair and Desolate: Bakersfeild
 
 
-  if (mod == 0) {
-    return ("House of theivery and misfortune: Oakland.");
-  } else if (mod == 1) {
-    return ("House of Whippets and Mischief: San Bernadino.");
-  } else if (mod == 2) {
-    return ("House of Fentynal and Influencers: Los Angeles.");
-  } else {
-    return ("House of Despair and Desolate: Bakersfeild.");
-  }
+return houses[mod];
 }
 
 $("#submit").click(function(){
