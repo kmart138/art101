@@ -6,10 +6,14 @@
 
 //functions
 
+$("#publish").click(function(){
+  let numCap = $("#user-name").val();
+  fizzBuzz(numCap);
+})
 
-function fizzBuzz() {
-  str ="";  
-  for (i = 1; i <= 200; i++) {
+function fizzBuzz(x) {
+  str =""; 
+  for (i = 1; i <= x; i++) {
     if (i % 105 == 0) {
       console.log(i + "FizzBuzzBoom!");
       str += i + " FizzBuzzBoom!<br>";
@@ -36,13 +40,11 @@ function fizzBuzz() {
       str += i + "<br>";
     }
   }
-  $("#output").html(str);
+  $("#door").html(str);
 }
 
 
 function main() {
-  fizzBuzz();
-  console.log("Main function started.");
   // the code that makes everything happen
 }
 
