@@ -8,7 +8,7 @@
 
 let houses = [
   "House of theivery and misfortune: Oakland - the city of car theft",
-  'House of Whippets and Mischief: San Bernadino - the city of crime <img src="images/sanbern.jpg" alt="San Bernadino" style="height:50px;">', 
+  'House of Whippets and Mischief: San Bernadino - the city of crime <img src="./img/sanbern.jpg" alt="San Bernadino" style="height:50px;">', 
   "House of fentanyl and Influencers: Los Angeles - the city of influencers",
   "House of Despair and Desolate: Bakersfeild - the city of farming"
 ];
