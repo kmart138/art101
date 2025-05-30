@@ -12,6 +12,12 @@ type: "GET",
 dataType: "json"
 }
 
+const ajaxObj2 = {
+  url: "https://api.nasa.gov/planetary/apod?api_key=c6weOufkrbS0CwssT8EQwpKs9FsPzNnWyVE5MMOj",
+  type: "GET",
+  dataType: "json"
+  }
+
 $("#buttonX").click(function() {
   $.ajax(ajaxObj)
     .done(function(data) {
@@ -25,6 +31,21 @@ $("#buttonX").click(function() {
     });
 }
 );
+
+$("#buttonY").click(function() {
+  $.ajax(ajaxObj2)
+    .done(function(data) {
+      console.log("success");
+      console.log(data);
+      let joke = data.url;
+      $("#output").append('<img src = ' + joke + '>');
+    })
+    .fail(function(xhr, status, error) {
+      console.log(error + " Status: " + status);
+    });
+}
+);
+
 
 
 
