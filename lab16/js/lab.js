@@ -7,13 +7,17 @@
 //functions
 
 
-const ajaxObj = {
-  url: "https://xkcd.com/info.0.json",
-  type: "GET",
-  dataType: "json"
-};
 
-function numX() {
+function numX(pages) {
+  let numComic = "";
+  if (pages != -1){
+    numComic = pages.toString();
+  } 
+  let ajaxObj = {
+    url: "https://xkcd.com/" + numComic + "/info.0.json",
+    type: "GET",
+    dataType: "json"
+  };
   console.log("numX function called");
   $.ajax(ajaxObj)
     .done(function(data) {
@@ -22,19 +26,25 @@ function numX() {
       let title = data.title;
       let image = data.img;  
       let alt = data.alt;    
-
+      let xnum = data.num;
       
-      $("#output").html('<h1>' + title + '</h1>' +
+      $("#outputText").html('<h1>' + title + '</h1>' +
         '<img src="' + image + '" alt="' + alt + '" title="' + alt + '">' +
         '<p>' + alt + '</p>');
+      $("#buttonB").click(function() {
+        numX(xnum - 1);
+      });
+      $("#buttonF").click(function() {
+        numX(xnum + 1);
+      });
     })
     .fail(function(xhr, status, error) {
       console.log(error + " Status: " + status);
-      $("#output").html('<p>Error fetching data: ' + error + '</p>');
+      $("#outputText").html('<p>Error fetching data: ' + error + '</p>');
     });
 }
 
-numX(); 
+numX(-1); 
 
 // Attach the function to a button click
 //$ ("#buttonX").click(function() {
