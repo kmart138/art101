@@ -1,52 +1,49 @@
-// index.js - Lab 13: loops
+// index.js - Lab 16: JSON and APIs
 // Author: Kalani Martin
-// Date: 5/22/25
+// Date: 6/4/25
 
 // Constants
 
 //functions
 
-$("#publish").click(function(){
-  let numCap = $("#user-name").val();
-  fizzBuzz(numCap);
-})
 
-function fizzBuzz(x) {
-  str =""; 
-  for (i = 1; i <= x; i++) {
-    if (i % 105 == 0) {
-      console.log(i + "FizzBuzzBoom!");
-      str += i + " FizzBuzzBoom!<br>";
-    } else if (i % 15 == 0) {
-      console.log(i + "FizzBuzz!");
-      str += i + " FizzBuzz!<br>";
-    } else if (i % 35 == 0) {
-      console.log(i + "BuzzBoom!");
-      str += i + " BuzzBoom!<br>";
-    } else if (i % 21 == 0) {
-      console.log(i + "FizzBoom!");
-      str += i + " FizzBoom!<br>";
-    } else if (i % 3 == 0) {
-      console.log(i + "Fizz!");
-      str += i + " Fizz!<br>";
-    } else if (i % 5 == 0) {
-      console.log(i + "Buzz!");
-      str += i + " Buzz!<br>";
-    } else if (i % 7 == 0) {
-      console.log(i + " Boom!");
-      str += i + " Boom!<br>";
-    } else {
-      console.log(i);
-      str += i + "<br>";
-    }
-  }
-  $("#door").html(str);
+const ajaxObj = {
+  url: "https://xkcd.com/info.0.json",
+  type: "GET",
+  dataType: "json"
+};
+
+function numX() {
+  console.log("numX function called");
+  $.ajax(ajaxObj)
+    .done(function(data) {
+      console.log("success");
+      console.log(data);
+      let title = data.title;
+      let image = data.img;  
+      let alt = data.alt;    
+
+      
+      $("#output").html('<h1>' + title + '</h1>' +
+        '<img src="' + image + '" alt="' + alt + '" title="' + alt + '">' +
+        '<p>' + alt + '</p>');
+    })
+    .fail(function(xhr, status, error) {
+      console.log(error + " Status: " + status);
+      $("#output").html('<p>Error fetching data: ' + error + '</p>');
+    });
 }
 
+numX(); 
 
-function main() {
-  // the code that makes everything happen
-}
+// Attach the function to a button click
+//$ ("#buttonX").click(function() {
+//  numX();
+// });
+
+// function main() {
+//   console.log("Main function loaded");
+// }
 
 // let's get this party started
-main();
+// main();
